@@ -28,3 +28,9 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew assembleDebug
+    
+    - name: Store appdebug
+      uses: actions/upload-artifact@v3
+      with:
+          name: MiceWine App
+          path: ./app/build
